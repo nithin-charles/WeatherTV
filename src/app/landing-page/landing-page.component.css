@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100lvh; /* Adjust the height as needed */
+  }
+  
+  .display {
+    white-space: nowrap;
+    /* Additional styles for the display div */
+  }
+  
+  .in {
+    margin-top: 10px; /* Adjust the spacing between display and in divs as needed */
+    /* Additional styles for the in div */
+  }
+
+  .welcome-note, .temp, .city-name{
+    color:beige
+  }
+
+  .transparent-button {
+    background-color: transparent;
+    border: none;
+  }
+  

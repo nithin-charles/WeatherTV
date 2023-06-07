@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="display">
+    <ng-container *ngIf="!temperature">
+      <h1 class="welcome-note">Enter the City Name</h1>
+    </ng-container>
+    <ng-container *ngIf="temperature != undefined">
+      <h1 class="city-name">{{ cityName }}</h1>
+      <h2 class="temp">{{ temperature }} C</h2>
+    </ng-container>
+  </div>
+  <ng-container *ngIf="!isSearchComplete; else backButton">
+    <div class="in">
+      <input
+        type="text"
+        [(ngModel)]="cityName"
+        (keyup.enter)="search(cityName)"
+      />
+      <button (click)="search(cityName)">Search</button>
+    </div>
+  </ng-container>
+  <ng-template #backButton>
+    <button (click)="showSearchBar()" class="transparent-button">
+        <img src="/assets/images/back-button.png" style="color: white">
+    </button>
+  </ng-template>
+</div>
