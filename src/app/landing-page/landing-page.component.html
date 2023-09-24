@@ -1,7 +1,11 @@
 <div class="container">
   <div class="display">
+    
     <ng-container *ngIf="!temperature">
-      <h1 class="welcome-note">Enter the City Name</h1>
+      <h1 class="hello" style="text-align: center;">Hello</h1>
+      <h3 class="greeting" style="text-align: center;">{{getTime()}}</h3>
+      
+      <h1 class="welcome-note" style="text-align: center;">Unleash Weather Wonders</h1>
     </ng-container>
     <ng-container *ngIf="temperature != undefined">
       <h1 class="city-name">{{ cityName }}</h1>
@@ -12,10 +16,13 @@
     <div class="in">
       <input
         type="text"
+        class="inputBox"
+        value="Default Text"
         [(ngModel)]="cityName"
         (keyup.enter)="search(cityName)"
+        [placeholder]="defaultText"
       />
-      <button (click)="search(cityName)">Search</button>
+      <!-- <button (click)="search(cityName)">Search</button> -->
     </div>
   </ng-container>
   <ng-template #backButton>

@@ -10,18 +10,60 @@
     white-space: nowrap;
     /* Additional styles for the display div */
   }
-  
+
+  .greeting{
+    letter-spacing: 10px;
+    margin-bottom: 80px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .hello{
+    padding-left: 40px;
+    letter-spacing: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  .welcome-note{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+  }
+
   .in {
-    margin-top: 10px; /* Adjust the spacing between display and in divs as needed */
+    margin-top: 20px; /* Adjust the spacing between display and in divs as needed */
     /* Additional styles for the in div */
   }
 
-  .welcome-note, .temp, .city-name{
-    color:beige
+  .hello, .welcome-note, .temp, .city-name, .greeting{
+    color:beige;
+  }
+  
+  @media screen and (max-width: 320px) {
+    .welcome-note, .temp, .city-name{
+      font-size: 15px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .welcome-note, .temp, .city-name{
+      font-size: 30px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .welcome-note, .temp, .city-name{
+      font-size: 70px;
+    }
   }
 
   .transparent-button {
     background-color: transparent;
     border: none;
+  }
+
+  .inputBox{
+    border-radius: 50px;
+    background-color: transparent;
+    border-color: beige;
+    color: beige;
+    text-align: center;
+    margin-bottom: 140px;
   }
   
